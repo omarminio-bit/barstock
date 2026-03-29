@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>BarStock</title>
+<title>Stock Omin</title>
 <link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#F2A623">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="BarStock">
+<meta name="apple-mobile-web-app-title" content="Stock Omin">
 <link rel="apple-touch-icon" href="/icon-192.png">
 <meta name="mobile-web-app-capable" content="yes">
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
@@ -40,12 +40,12 @@ body{font-family:'Helvetica Neue',Arial,sans-serif;background:var(--bg);color:va
 .back-btn{background:none;border:none;color:var(--text2);font-size:12px;cursor:pointer;font-family:inherit;padding:4px 0}
 /* APP */
 #app-screen{display:none}
-.nav{background:var(--bg2);position:sticky;top:0;z-index:100;border-bottom:0.5px solid var(--border)}.nav-top{display:flex;align-items:center;padding:0 14px;height:50px}
-.nav-logo{font-size:15px;font-weight:700;color:var(--text);margin-right:14px;flex-shrink:0;letter-spacing:-0.5px}
+.nav{background:var(--bg2);position:sticky;top:0;z-index:100;border-bottom:0.5px solid var(--border)}.nav-top{display:flex;align-items:center;padding:0 20px;height:54px}
+.nav-logo{font-size:16px;font-weight:700;color:var(--text);margin-right:20px;flex-shrink:0;letter-spacing:-0.5px}
 .nav-logo span{color:var(--gold)}
-.nav-tabs{display:flex;gap:2px;overflow-x:auto;flex:1;scrollbar-width:none}
+.nav-tabs{display:flex;gap:3px;overflow-x:auto;flex:1;scrollbar-width:none;justify-content:center}
 .nav-tabs::-webkit-scrollbar{display:none}
-.nav-tab{padding:5px 11px;border-radius:6px;font-size:12px;cursor:pointer;white-space:nowrap;color:var(--text2);border:none;background:transparent;font-family:inherit;transition:all .15s}
+.nav-tab{padding:7px 16px;border-radius:7px;font-size:15px;font-weight:500;cursor:pointer;white-space:nowrap;color:var(--text2);border:none;background:transparent;font-family:inherit;transition:all .15s}
 .nav-tab:hover{color:var(--text);background:rgba(255,255,255,.07)}
 .nav-tab.active{color:var(--text);background:rgba(255,255,255,.12)}
 .nav-right{display:flex;align-items:center;gap:6px;flex-shrink:0}
@@ -54,7 +54,7 @@ body{font-family:'Helvetica Neue',Arial,sans-serif;background:var(--bg);color:va
 .nav-user-name{font-size:11px;color:var(--text2)}
 .nav-logout{padding:4px 9px;border-radius:6px;font-size:11px;color:var(--text2);border:0.5px solid var(--border);background:transparent;cursor:pointer;font-family:inherit}
 .nav-logout:hover{color:var(--text)}
-.page{display:none;padding:18px;max-width:1100px;margin:0 auto}
+.page{display:none;padding:20px 24px;max-width:1280px;margin:0 auto}
 .page.active{display:block}
 /* CARDS */
 .card{background:var(--bg3);border:0.5px solid var(--border);border-radius:12px;padding:14px 18px;margin-bottom:14px}
@@ -243,14 +243,25 @@ select option{background:var(--bg3)}
 .cr-toast.show{opacity:1}
 
 /* ===== MOBILE OPTIMIZADO ===== */
+/* Bottom nav mobile */
+.mobile-nav{display:none;position:fixed;bottom:0;left:0;right:0;background:var(--bg2);border-top:0.5px solid var(--border);z-index:200;padding:0 0 env(safe-area-inset-bottom,0)}
+.mobile-nav-scroll{display:flex;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.mobile-nav-scroll::-webkit-scrollbar{display:none}
+.mobile-nav-btn{display:flex;flex-direction:column;align-items:center;gap:2px;padding:8px 14px;min-width:60px;cursor:pointer;background:none;border:none;font-family:inherit;color:var(--text2);transition:color .15s;flex-shrink:0}
+.mobile-nav-btn.active{color:var(--gold)}
+.mobile-nav-btn .mn-icon{font-size:20px;line-height:1}
+.mobile-nav-btn .mn-label{font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.04em;white-space:nowrap}
+/* Separador de grupos en mobile nav */
+.mobile-nav-sep{width:0.5px;background:var(--border);margin:8px 4px;align-self:stretch;flex-shrink:0}
+/* Espacio inferior para el contenido cuando hay nav mobile */
+.page-with-mobile-nav{padding-bottom:70px!important}
+/* ===== MOBILE OPTIMIZADO ===== */
 @media(max-width:768px){
-  /* Nav */
-  .nav{height:auto;padding:0;flex-direction:column;align-items:stretch}
-  .nav-top{display:flex;align-items:center;padding:0 12px;height:50px;border-bottom:0.5px solid var(--border)}
-  .nav-logo{margin-right:auto}
-  .nav-tabs{padding:4px 8px;gap:2px;border-bottom:0.5px solid var(--border)}
-  .nav-tab{padding:8px 10px;font-size:12px;flex:1;text-align:center;border-radius:8px}
-  .nav-tab.active{background:rgba(255,255,255,.15)}
+  /* Nav desktop oculto, mobile nav visible */
+  .nav-tabs{display:none}
+  .mobile-nav{display:flex}
+  .page{padding-bottom:72px}
+  .nav-top{padding:0 14px}
   
   /* Pages */
   .page{padding:12px 10px}
@@ -327,7 +338,7 @@ select option{background:var(--bg3)}
 <!-- LOGIN -->
 <div id="login-screen">
   <div class="login-card">
-    <div class="login-logo">Bar<span>Stock</span></div>
+    <div class="login-logo">Stock<span> Omin</span></div>
     <div class="login-sub">Control de stock para bares</div>
     <div id="roles-wrap">
       <button class="role-btn" id="btn-admin">
@@ -361,7 +372,7 @@ select option{background:var(--bg3)}
 <div id="app-screen">
   <nav class="nav">
     <div class="nav-top">
-      <div class="nav-logo">Bar<span>Stock</span></div>
+      <div class="nav-logo">Stock<span> Omin</span></div>
       <div class="nav-right">
         <div class="nav-user"><div class="nav-user-dot" id="nav-dot"></div><div class="nav-user-name" id="nav-name"></div></div>
         <button class="nav-logout" id="nav-logout">Salir</button>
@@ -426,6 +437,10 @@ select option{background:var(--bg3)}
 <div class="modal-overlay" id="modal-barra"><div class="modal"><div class="modal-header"><div class="modal-title" id="mbar-title">Nueva barra</div><button class="modal-close" onclick="closeModal('modal-barra')">×</button></div><div class="form-col"><div class="form-group form-full"><label>Nombre</label><input type="text" id="mbar-nom" style="width:100%"></div><div class="form-group form-full"><label>Color</label><div class="color-picker-row" id="mbar-colors"></div></div></div><div class="modal-footer"><button class="btn" onclick="closeModal('modal-barra')">Cancelar</button><button class="btn btn-primary" onclick="guardarBarra()">Guardar</button></div></div></div>
 
 <div class="modal-overlay" id="modal-pin"><div class="modal"><div class="modal-header"><div class="modal-title">Cambiar PIN</div><button class="modal-close" onclick="closeModal('modal-pin')">×</button></div><div class="form-col"><div class="form-group form-full"><label>Rol</label><select id="pin-rol" style="width:100%"><option value="admin">Administrador</option><option value="barra">Encargado de barra</option></select></div><div class="form-group form-full"><label>Nuevo PIN (4 dígitos)</label><input type="password" id="pin-nuevo" maxlength="4" style="width:100%" inputmode="numeric"></div><div class="form-group form-full"><label>Confirmar PIN</label><input type="password" id="pin-conf" maxlength="4" style="width:100%" inputmode="numeric"></div></div><div class="modal-footer"><button class="btn" onclick="closeModal('modal-pin')">Cancelar</button><button class="btn btn-primary" onclick="guardarPin()">Guardar</button></div></div></div>
+
+<div class="mobile-nav" id="mobile-nav" style="display:none">
+  <div class="mobile-nav-scroll" id="mobile-nav-scroll"></div>
+</div>
 
 <script>
 // ===== SUPABASE =====
@@ -515,6 +530,9 @@ function vUbic(loc){return Object.entries(S.stock[loc]||{}).reduce((t,[id,q])=>{
 function sProds(){return[...S.productos].sort((a,b)=>a.nombre.localeCompare(b.nombre,'es',{sensitivity:'base'}));}
 function tCon(n){return(n.barras||[]).reduce((t,bid)=>t+((n.consumiciones||{})[bid]||[]).reduce((s,c)=>s+c.costo_total,0),0);}
 function loading(el){el.innerHTML='<div class="loading"><div class="spinner"></div>Cargando...</div>';}
+
+// ===== ICONOS DE NAVEGACION =====
+const TICONS={dashboard:'📊',productos:'📦',recetas:'🍹',deposito:'🏭',barras:'🍺',noche:'🌙',stock_barra:'📋',compras_barra:'🛒',traspasos:'↔️',reportes:'📈',cruces:'🔄',config:'⚙️'};
 
 // ===== BUSCADOR DE PRODUCTO (componente reutilizable) =====
 // Uso: prodSearch(containerId, onSelect, opciones)
@@ -612,8 +630,28 @@ async function startApp(){
 function guardarPin(){const rol=document.getElementById('pin-rol').value,n=document.getElementById('pin-nuevo').value,c=document.getElementById('pin-conf').value;if(n.length!==4||!/^\d{4}$/.test(n)){alert('4 dígitos requeridos');return;}if(n!==c){alert('Los PINs no coinciden');return;}PINS[rol]=n;closeModal('modal-pin');alert('PIN actualizado.');}
 
 // ===== NAV =====
-function buildNav(){document.getElementById('nav-tabs').innerHTML=TABS[CU].map(t=>`<button class="nav-tab" data-page="${t}">${TLABELS[t]}</button>`).join('');document.querySelectorAll('.nav-tab').forEach(btn=>btn.addEventListener('click',()=>goTo(btn.dataset.page)));}
+function buildNav(){
+  // Nav desktop
+  document.getElementById('nav-tabs').innerHTML=TABS[CU].map(t=>`<button class="nav-tab" data-page="${t}">${TLABELS[t]}</button>`).join('');
+  document.querySelectorAll('.nav-tab').forEach(btn=>btn.addEventListener('click',()=>goTo(btn.dataset.page)));
+  // Nav mobile (barra inferior)
+  const mobileScroll=document.getElementById('mobile-nav-scroll');
+  if(mobileScroll){
+    mobileScroll.innerHTML=TABS[CU].map(t=>`<button class="mobile-nav-btn" data-page="${t}" onclick="goTo('${t}')"><span class="mn-icon">${TICONS[t]||'●'}</span><span class="mn-label">${TLABELS[t]}</span></button>`).join('');
+  }
+  // Mostrar/ocultar mobile nav segun pantalla
+  const isMobile=window.innerWidth<=768;
+  const mobileNav=document.getElementById('mobile-nav');
+  if(mobileNav)mobileNav.style.display=isMobile?'flex':'none';
+  window.addEventListener('resize',()=>{
+    const m=window.innerWidth<=768;
+    if(mobileNav)mobileNav.style.display=m?'flex':'none';
+  },{once:true});
+}
 function goTo(page){
+  // Actualizar mobile nav activo
+  document.querySelectorAll('.mobile-nav-btn').forEach(b=>b.classList.toggle('active',b.dataset.page===page));
+
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
   document.querySelectorAll('.nav-tab').forEach(t=>t.classList.remove('active'));
   document.getElementById('page-'+page)?.classList.add('active');
