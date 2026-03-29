@@ -18,11 +18,11 @@
 body{font-family:'Helvetica Neue',Arial,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;font-size:14px}
 /* LOGIN */
 #login-screen{min-height:100vh;display:flex;align-items:center;justify-content:center}
-.login-card{background:var(--bg2);border:0.5px solid var(--border);border-radius:16px;padding:36px 32px;width:90%;max-width:360px;text-align:center}
+.login-card{background:var(--bg2);border:0.5px solid var(--border);border-radius:16px;padding:36px 28px;width:94%;max-width:380px;text-align:center}
 .login-logo{font-size:26px;font-weight:700;color:var(--text);margin-bottom:6px;letter-spacing:-1px}
 .login-logo span{color:var(--gold)}
 .login-sub{font-size:12px;color:var(--text2);margin-bottom:28px}
-.role-btn{display:flex;align-items:center;gap:14px;width:100%;padding:14px 18px;border-radius:10px;border:0.5px solid var(--border);background:rgba(255,255,255,.03);cursor:pointer;text-align:left;font-family:inherit;margin-bottom:10px;transition:background .2s}
+.role-btn{display:flex;align-items:center;gap:14px;width:100%;padding:16px 18px;border-radius:12px;border:0.5px solid var(--border);background:rgba(255,255,255,.03);cursor:pointer;text-align:left;font-family:inherit;margin-bottom:12px;transition:background .2s}
 .role-btn:hover{background:rgba(255,255,255,.08)}
 .role-btn:last-child{margin-bottom:0}
 .role-icon{font-size:20px;flex-shrink:0}
@@ -34,13 +34,13 @@ body{font-family:'Helvetica Neue',Arial,sans-serif;background:var(--bg);color:va
 .pin-dot{width:13px;height:13px;border-radius:50%;border:1.5px solid rgba(255,255,255,.2);transition:all .15s}
 .pin-dot.filled{background:var(--gold);border-color:var(--gold)}
 .pin-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-bottom:10px}
-.pin-key{padding:13px;border-radius:8px;border:0.5px solid var(--border);background:rgba(255,255,255,.05);color:var(--text);font-size:17px;font-weight:500;cursor:pointer;font-family:inherit;transition:background .15s}
+.pin-key{padding:16px;border-radius:10px;border:0.5px solid var(--border);background:rgba(255,255,255,.05);color:var(--text);font-size:20px;font-weight:500;cursor:pointer;font-family:inherit;transition:background .15s}
 .pin-key:hover{background:rgba(255,255,255,.12)}
 .pin-err{color:#E24B4A;font-size:12px;min-height:17px;margin-bottom:7px}
 .back-btn{background:none;border:none;color:var(--text2);font-size:12px;cursor:pointer;font-family:inherit;padding:4px 0}
 /* APP */
 #app-screen{display:none}
-.nav{background:var(--bg2);padding:0 14px;display:flex;align-items:center;height:50px;position:sticky;top:0;z-index:100;border-bottom:0.5px solid var(--border)}
+.nav{background:var(--bg2);position:sticky;top:0;z-index:100;border-bottom:0.5px solid var(--border)}.nav-top{display:flex;align-items:center;padding:0 14px;height:50px}
 .nav-logo{font-size:15px;font-weight:700;color:var(--text);margin-right:14px;flex-shrink:0;letter-spacing:-0.5px}
 .nav-logo span{color:var(--gold)}
 .nav-tabs{display:flex;gap:2px;overflow-x:auto;flex:1;scrollbar-width:none}
@@ -167,9 +167,9 @@ select option{background:var(--bg3)}
 .cr-qty-inp{font-size:24px;font-weight:600;text-align:center;width:100px;padding:9px;border-radius:10px;border:1px solid var(--border2);background:rgba(255,255,255,.05);color:var(--text);font-family:inherit;outline:none}
 .cr-qty-inp:focus{border-color:var(--gold)}
 .cr-qty-btns{display:flex;gap:5px;flex-wrap:wrap}
-.cr-qb{padding:7px 11px;border-radius:7px;border:0.5px solid var(--border2);background:rgba(255,255,255,.05);color:var(--text);font-size:13px;font-weight:500;cursor:pointer;font-family:inherit}
+.cr-qb{padding:10px 14px;border-radius:9px;border:0.5px solid var(--border2);background:rgba(255,255,255,.05);color:var(--text);font-size:15px;font-weight:600;cursor:pointer;font-family:inherit}
 .cr-qb:hover{background:rgba(255,255,255,.1)}
-.cr-confirm-btn{width:100%;padding:13px;border-radius:10px;background:var(--gold);color:var(--bg);font-size:15px;font-weight:700;border:none;cursor:pointer;font-family:inherit;transition:all .15s}
+.cr-confirm-btn{width:100%;padding:16px;border-radius:12px;background:var(--gold);color:var(--bg);font-size:16px;font-weight:700;border:none;cursor:pointer;font-family:inherit;transition:all .15s}
 .cr-confirm-btn:hover{background:var(--gold2)}
 .cr-ll{margin-top:14px}
 .cr-ll-title{font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:.06em;margin-bottom:7px}
@@ -182,7 +182,7 @@ select option{background:var(--bg3)}
 .cr-mode-btn{flex:1;padding:7px;border-radius:7px;border:0.5px solid var(--border);background:transparent;color:var(--text2);font-size:11px;font-weight:500;cursor:pointer;font-family:inherit;text-align:center;transition:all .15s}
 .cr-mode-btn.active{background:rgba(242,166,35,.12);border-color:var(--gold);color:var(--gold)}
 /* BARRA CONFIG */
-.barra-config-card{background:var(--bg2);border:0.5px solid var(--border);border-radius:10px;padding:10px 14px;display:flex;align-items:center;gap:10px;margin-bottom:7px}
+.barra-config-card{background:var(--bg2);border:0.5px solid var(--border);border-radius:10px;padding:12px 14px;display:flex;align-items:center;gap:10px;margin-bottom:8px;flex-wrap:wrap}
 .color-picker-row{display:flex;gap:7px;flex-wrap:wrap;margin-top:5px}
 .color-swatch{width:22px;height:22px;border-radius:50%;cursor:pointer;border:2px solid transparent;transition:all .15s}
 .color-swatch.selected{border-color:var(--text);transform:scale(1.2)}
@@ -241,7 +241,85 @@ select option{background:var(--bg3)}
 .search-count{font-size:11px;color:var(--text2);white-space:nowrap}
 .cr-toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:var(--green);color:#fff;padding:9px 18px;border-radius:20px;font-size:12px;font-weight:600;z-index:400;opacity:0;transition:opacity .2s;pointer-events:none;white-space:nowrap}
 .cr-toast.show{opacity:1}
-@media(max-width:600px){.page{padding:10px}.form-col{grid-template-columns:1fr}.compare-grid{grid-template-columns:1fr 1fr}}
+
+/* ===== MOBILE OPTIMIZADO ===== */
+@media(max-width:768px){
+  /* Nav */
+  .nav{height:auto;padding:0;flex-direction:column;align-items:stretch}
+  .nav-top{display:flex;align-items:center;padding:0 12px;height:50px;border-bottom:0.5px solid var(--border)}
+  .nav-logo{margin-right:auto}
+  .nav-tabs{padding:4px 8px;gap:2px;border-bottom:0.5px solid var(--border)}
+  .nav-tab{padding:8px 10px;font-size:12px;flex:1;text-align:center;border-radius:8px}
+  .nav-tab.active{background:rgba(255,255,255,.15)}
+  
+  /* Pages */
+  .page{padding:12px 10px}
+  
+  /* Cards */
+  .card{padding:12px 14px}
+  
+  /* Stats */
+  .stats-grid{grid-template-columns:repeat(2,1fr);gap:8px}
+  .stat-value{font-size:20px}
+  
+  /* Tablas - scroll horizontal */
+  .tbl-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  table{min-width:500px;font-size:12px}
+  th,td{padding:8px 6px}
+  
+  /* Formularios */
+  .form-col{grid-template-columns:1fr}
+  .form-row{flex-direction:column;gap:10px}
+  input,select{font-size:16px;padding:10px 12px;border-radius:8px} /* 16px evita zoom en iOS */
+  .btn{padding:10px 14px;font-size:13px}
+  .btn-sm{padding:7px 11px;font-size:12px}
+  
+  /* Compare grid */
+  .compare-grid{grid-template-columns:1fr 1fr}
+  .compare-value{font-size:16px}
+  
+  /* Modales */
+  .modal{width:100%;max-width:100%;border-radius:16px 16px 0 0;position:fixed;bottom:0;left:0;right:0;max-height:92vh;padding:20px 16px}
+  .modal-overlay{align-items:flex-end}
+  .modal-lg{max-width:100%}
+  
+  /* Section header */
+  .section-header{flex-direction:column;align-items:flex-start;gap:8px}
+  .section-header > div:last-child{width:100%;display:flex;gap:6px}
+  .section-header > div:last-child .btn{flex:1;text-align:center}
+
+  /* Inner tabs */
+  .inner-tab{padding:8px 10px;font-size:12px}
+  
+  /* Chips */
+  .chip{padding:6px 12px;font-size:12px}
+  
+  /* Barras grid */
+  .barras-grid{grid-template-columns:1fr !important}
+  
+  /* Carga rápida */
+  .sector-grid{grid-template-columns:1fr 1fr;gap:8px}
+  .sector-btn{padding:16px 10px}
+  .sb-icon{font-size:22px}
+  .cr-qty-inp{font-size:22px;width:90px}
+  
+  /* Prod search */
+  .prod-search-inp{font-size:16px;padding:10px 12px}
+  
+  /* Search box */
+  .search-box input{font-size:16px}
+  
+  /* Toggle */
+  .toggle{width:40px;height:22px}
+  .toggle-slider:before{width:16px;height:16px}
+  .toggle input:checked+.toggle-slider:before{transform:translateX(18px)}
+}
+
+@media(max-width:400px){
+  .nav-tab{font-size:11px;padding:7px 6px}
+  .stats-grid{grid-template-columns:1fr 1fr}
+  .compare-grid{grid-template-columns:1fr}
+}
 </style>
 </head>
 <body>
@@ -282,12 +360,14 @@ select option{background:var(--bg3)}
 <!-- APP -->
 <div id="app-screen">
   <nav class="nav">
-    <div class="nav-logo">Bar<span>Stock</span></div>
-    <div class="nav-tabs" id="nav-tabs"></div>
-    <div class="nav-right">
-      <div class="nav-user"><div class="nav-user-dot" id="nav-dot"></div><div class="nav-user-name" id="nav-name"></div></div>
-      <button class="nav-logout" id="nav-logout">Salir</button>
+    <div class="nav-top">
+      <div class="nav-logo">Bar<span>Stock</span></div>
+      <div class="nav-right">
+        <div class="nav-user"><div class="nav-user-dot" id="nav-dot"></div><div class="nav-user-name" id="nav-name"></div></div>
+        <button class="nav-logout" id="nav-logout">Salir</button>
+      </div>
     </div>
+    <div class="nav-tabs" id="nav-tabs"></div>
   </nav>
   <div id="page-dashboard" class="page active"></div>
   <div id="page-productos" class="page"></div>
@@ -350,7 +430,7 @@ const TCOL={cortesia:'b-blue',staff:'b-purple',rotura:'b-red',degustacion:'b-gre
 
 // ===== ESTADO LOCAL =====
 let CU=null,pbuf='',prole='',editCompraIdx=null,mconBid=null;
-let S={barras:[],productos:[],recetas:[],stock:{deposito:{}},noches:[],traspasos:[],compras:[],nocheActiva:null,eProdIdx:null,eRecIdx:null,eBarId:null,colorSel:PALETTE[0],ingTemp:[],prodAsc:true,filtCat:'Todos'};
+let S={barras:[],productos:[],recetas:[],stock:{deposito:{}},noches:[],traspasos:[],compras:[],nocheActiva:null,eProdIdx:null,eRecIdx:null,eBarId:null,colorSel:PALETTE[0],ingTemp:[],prodAsc:true,filtCat:'Todos',prodBusq:''};
 let CR={mode:'apertura',sector:null,step:'sector',prod:null,loaded:{},ultra:false,cbBuf:'',cbTimer:null,_scanH:null};
 
 // ===== SUPABASE HELPERS =====
@@ -393,6 +473,9 @@ async function cargarDatos(){
   S.compras=compras.map(c=>({...c,prodId:c.prod_id,prov:c.proveedor}));
   S.traspasos=traspasos.map(t=>({...t,prodId:t.prod_id,fecha:t.fecha||t.created_at}));
   S.noches=noches.map(n=>({...n}));
+  // Recuperar noche en curso si existe
+  const nocheEnCurso=noches.find(n=>n.en_curso);
+  if(nocheEnCurso){S.nocheActiva={...nocheEnCurso};}
   // Reconstruir stock
   S.stock={deposito:{}};
   for(const b of S.barras)S.stock[b.id]={};
@@ -529,7 +612,8 @@ function openModal(id){document.getElementById(id)?.classList.add('open');}
 
 // ===== CARGA RÁPIDA =====
 function abrirCR(mode){CR.mode=mode;CR.sector=null;CR.step='sector';CR.prod=null;CR.loaded={};CR.ultra=false;if(S.nocheActiva)S.nocheActiva.barras.forEach(bid=>{if(!CR.loaded[bid])CR.loaded[bid]={};});document.getElementById('cr-title').textContent=mode==='apertura'?'Apertura — Carga rápida':'Cierre — Carga rápida';document.getElementById('cr-badge').textContent='';document.getElementById('cr-overlay').classList.add('open');crRender();}
-function cerrarCR(){document.getElementById('cr-overlay').classList.remove('open');if(S.nocheActiva){Object.entries(CR.loaded).forEach(([bid,prods])=>{const dest=CR.mode==='apertura'?'apertura':'cierre';if(!S.nocheActiva[dest][bid])S.nocheActiva[dest][bid]={};Object.entries(prods).forEach(([pid,qty])=>S.nocheActiva[dest][bid][parseInt(pid)]=qty);});}rNoche();}
+function cerrarCR(){document.getElementById('cr-overlay').classList.remove('open');if(S.nocheActiva){Object.entries(CR.loaded).forEach(([bid,prods])=>{const dest=CR.mode==='apertura'?'apertura':'cierre';if(!S.nocheActiva[dest][bid])S.nocheActiva[dest][bid]={};Object.entries(prods).forEach(([pid,qty])=>S.nocheActiva[dest][bid][parseInt(pid)]=qty);});// Persistir en Supabase
+if(S.nocheActiva.id){const field=CR.mode==='apertura'?'apertura':'cierre';dbUpdate('noches',S.nocheActiva.id,{[field]:S.nocheActiva[field]});}}rNoche();}
 document.getElementById('cr-back').addEventListener('click',()=>{if(CR.step==='sector'){cerrarCR();return;}if(CR.step==='qty'){CR.step='search';CR.prod=null;crRender();return;}CR.step='sector';CR.sector=null;crRender();});
 function crRender(){const body=document.getElementById('cr-body');if(CR.step==='sector')crSector(body);else if(CR.step==='search')crSearch(body);else crQty(body);}
 function crSector(body){document.getElementById('cr-badge').textContent='';const barras=S.nocheActiva?S.nocheActiva.barras.map(bid=>gB(bid)).filter(Boolean):bAct();body.innerHTML=`<div style="text-align:center;margin-bottom:20px;padding-top:4px"><div style="font-size:12px;color:var(--text2);margin-bottom:4px">Modo: <strong style="color:var(--gold)">${CR.mode==='apertura'?'Apertura':'Cierre'}</strong></div><div style="font-size:18px;font-weight:700">¿Qué sector querés cargar?</div></div><div class="sector-grid">${['🍺','🍹','🥃','🍸'].slice(0,barras.length).map((ic,i)=>{const b=barras[i];const cnt=CR.loaded[b.id]?Object.keys(CR.loaded[b.id]).length:0;return`<button class="sector-btn" data-bid="${b.id}"><div class="sb-icon">${ic}</div><div class="sb-name" style="color:${b.color}">${b.nombre}</div><div class="sb-sub">${cnt?cnt+' cargado'+(cnt>1?'s':''):'Sin carga aún'}</div></button>`;}).join('')}</div>${Object.values(CR.loaded).some(x=>Object.keys(x).length>0)?`<div style="margin-top:18px;text-align:center"><button id="cr-confirmar-todo" style="padding:11px 24px;border-radius:10px;background:var(--green);color:#fff;font-size:13px;font-weight:600;border:none;cursor:pointer;font-family:inherit">Confirmar carga y volver →</button></div>`:''}`;body.querySelectorAll('.sector-btn').forEach(btn=>btn.addEventListener('click',()=>crSelSector(btn.dataset.bid)));body.querySelector('#cr-confirmar-todo')?.addEventListener('click',cerrarCR);}
@@ -555,21 +639,47 @@ function rDash(){
 }
 
 // ===== PRODUCTOS =====
-function rProds(filt){
+function rProds(filt,busq){
   if(filt!==undefined)S.filtCat=filt;
+  if(busq!==undefined)S.prodBusq=busq||'';
   const pg=document.getElementById('page-productos');
   const cats=['Todos',...new Set(S.productos.map(p=>p.cat).sort())];
   let lista=S.filtCat==='Todos'?[...S.productos]:S.productos.filter(p=>p.cat===S.filtCat);
+  if(S.prodBusq){const q=S.prodBusq.toLowerCase();lista=lista.filter(p=>p.nombre.toLowerCase().includes(q)||(p.barcode&&p.barcode.includes(q)));}
   lista.sort((a,b)=>S.prodAsc?a.nombre.localeCompare(b.nombre,'es',{sensitivity:'base'}):b.nombre.localeCompare(a.nombre,'es',{sensitivity:'base'}));
   const activos=lista.filter(p=>p.activo!==false);
   const inactivos=lista.filter(p=>p.activo===false);
   const filaProducto=p=>`<tr style="${p.activo===false?'opacity:0.45':''}"><td style="font-weight:600;font-size:12px">${p.nombre}</td><td><span class="badge b-blue" style="font-size:9px">${p.cat}</span></td><td><span class="badge ${p.tipo==='fraccionado'?'b-purple':'b-gray'}">${p.tipo==='fraccionado'?'Fracc.':'Unidad'}</span></td><td style="color:var(--text2);font-size:11px">${p.ml}</td><td style="font-size:12px">${p.costo>0?fp(p.costo):'<span style="color:var(--text3)">—</span>'}</td><td style="color:#378ADD;font-size:12px">${p.tipo==='fraccionado'&&p.costo>0?fp(cozB(p))+'/oz':'—'}</td><td style="color:var(--gold);font-size:12px">${p.precio_venta>0?fp(p.precio_venta):'<span style="color:var(--text3)">—</span>'}</td><td style="font-size:10px;font-family:monospace;color:var(--text3)">${p.barcode||'—'}</td><td style="font-size:12px">${fn(p.min)}</td><td style="display:flex;gap:4px"><button class="btn btn-sm" onclick="openMProd(${p.id})">Editar</button><label class="toggle" title="${p.activo===false?'Activar':'Desactivar'}"><input type="checkbox" ${p.activo!==false?'checked':''} onchange="togProd(${p.id},this.checked)"><span class="toggle-slider"></span></label></td></tr>`;
   pg.innerHTML=`<div class="section-header"><div class="section-title">Productos (${activos.length} activos${inactivos.length>0?' · '+inactivos.length+' inactivos':''})</div><button class="btn btn-primary" onclick="openMProd()">+ Nuevo</button></div>
+  <div class="search-box" style="margin-bottom:8px"><span class="search-icon">🔎</span><input type="text" placeholder="Buscar por nombre o código de barras..." value="${S.prodBusq||''}" id="prod-busq" oninput="filtrarProds(this.value)" onkeydown="event.stopPropagation()">${S.prodBusq?`<button class="search-clear" onclick="filtrarProds('')">×</button>`:''}</div>
   <div class="chip-row">${cats.map(c=>`<button class="chip ${c===S.filtCat?'active':''}" onclick="rProds('${c}')">${c}</button>`).join('')}</div>
   <div class="card"><div class="tbl-wrap"><table><thead><tr><th onclick="S.prodAsc=!S.prodAsc;rProds()">Nombre ${S.prodAsc?'↑':'↓'}</th><th>Cat.</th><th>Tipo</th><th>ml</th><th>Costo</th><th>Costo/oz</th><th>Precio venta</th><th>Código</th><th>Mín.</th><th>Acción</th></tr></thead><tbody>
   ${activos.map(filaProducto).join('')}
   ${inactivos.length>0?`<tr><td colspan="9" style="padding:8px;font-size:11px;color:var(--text3);text-align:center;border-top:1px dashed rgba(255,255,255,.1)">— Productos inactivos (no aparecen en operaciones) —</td></tr>${inactivos.map(filaProducto).join('')}`:''}
   </tbody></table></div></div>`;
+}
+function filtrarProds(val){
+  S.prodBusq=val||'';
+  const q=val.toLowerCase().trim();
+  // Mostrar/ocultar filas sin rerenderizar
+  const rows=document.querySelectorAll('#page-productos tbody tr');
+  let vis=0;
+  rows.forEach(r=>{
+    const nombre=r.querySelector('td:first-child')?.textContent.toLowerCase()||'';
+    const codigo=r.querySelector('td:nth-child(7)')?.textContent.toLowerCase()||'';
+    const match=!q||nombre.includes(q)||codigo.includes(q);
+    r.style.display=match?'':'none';
+    if(match)vis++;
+  });
+  // Actualizar contador
+  const titulo=document.querySelector('#page-productos .section-title');
+  if(titulo){
+    const total=document.querySelectorAll('#page-productos tbody tr').length;
+    titulo.textContent=q?`Productos (${vis} de ${total})`:`Productos (${document.querySelectorAll('#page-productos tbody tr[style=""]').length||total})`;
+  }
+  // Mostrar/ocultar botón clear
+  const clr=document.querySelector('#page-productos .search-clear');
+  if(clr)clr.style.display=val?'':'none';
 }
 async function togProd(id,activo){
   const p=gP(id);if(!p)return;
@@ -600,6 +710,8 @@ async function guardarProducto(){
   }
   closeModal('modal-producto');rProds();
 }
+  if(S.prodBusq)setTimeout(()=>filtrarProds(S.prodBusq),0);
+
 
 // ===== RECETAS (en memoria, no BD) =====
 function rRecs(){const pg=document.getElementById('page-recetas');pg.innerHTML=`<div class="section-header"><div class="section-title">Recetas</div><button class="btn btn-primary" onclick="openMRec()">+ Nueva receta</button></div><div class="card"><div class="tbl-wrap"><table><thead><tr><th>Nombre</th><th>Tipo</th><th>Ingredientes</th><th>Costo</th><th>Precio</th><th>Precio/oz</th><th>Margen</th><th></th></tr></thead><tbody>${S.recetas.map((r,i)=>{const co=cRec(r),m=r.precio-co,mp=r.precio?Math.round(m/r.precio*100):0;const ozTot=(r.ingredientes||[]).reduce((s,ing)=>{const p=gP(ing.prodId);return s+(p?.tipo==='fraccionado'?ing.oz:0);},0);const pMed=ozTot>0&&r.precio?'$'+Math.round(r.precio/ozTot).toLocaleString('es-AR')+'/oz':'—';return`<tr><td style="font-weight:600">${r.nombre}</td><td><span class="badge ${r.tipo==='combo'?'b-amber':'b-blue'}">${r.tipo==='combo'?'Combo':'Trago'}</span></td><td style="font-size:11px">${(r.ingredientes||[]).map(ing=>{const p=gP(ing.prodId);if(!p)return'';return p.tipo==='fraccionado'?`<div>${p.nombre} — ${ing.oz}oz · <strong style="color:#AFA9EC">${Math.floor(ozB(p)/ing.oz)} trag./bot.</strong></div>`:`<div>${p.nombre} — x${fn(ing.qty,1)} u.</div>`;}).join('')}</td><td>${fp(co)}</td><td style="font-weight:600">${fp(r.precio)}</td><td style="color:var(--gold);font-size:12px;font-weight:600">${pMed}</td><td><span class="badge ${mp>=60?'b-green':mp>=40?'b-amber':'b-red'}">${mp}%</span></td><td style="display:flex;gap:3px"><button class="btn btn-sm" onclick="openMRec(${i})">Editar</button><button class="btn btn-sm btn-danger" onclick="borrarRec(${i})">×</button></td></tr>`;}).join('')}</tbody></table></div></div>`;}
@@ -641,10 +753,21 @@ function rBarras(filtro=''){
 // ===== NOCHE =====
 function rNoche(){
   const pg=document.getElementById('page-noche');const hoy=new Date().toISOString().substring(0,10);const act=bAct();
-  pg.innerHTML=`<div class="inner-tabs"><button class="inner-tab active" onclick="switchTab('noche','nueva',this)">Nueva noche</button><button class="inner-tab" onclick="switchTab('noche','historial',this)">Historial</button></div><div id="noche-tab-nueva" data-tab><div id="n-p1"><div class="card"><div class="card-title">Configurar nueva noche</div><div class="form-row"><div class="form-group"><label>Fecha</label><input type="date" id="n-fecha" value="${hoy}" style="min-width:140px"></div><div class="form-group"><label>Barras</label><div style="display:flex;gap:9px;flex-wrap:wrap;margin-top:3px">${act.map(b=>`<label style="display:flex;align-items:center;gap:4px;font-size:12px;cursor:pointer"><input type="checkbox" value="${b.id}" checked style="width:auto"><span style="color:${b.color};font-weight:600">${b.nombre}</span></label>`).join('')}</div></div></div><button class="btn btn-primary" onclick="nIniciar()">Iniciar noche →</button></div></div><div id="n-p2" style="display:none"></div><div id="n-p3" style="display:none"></div><div id="n-p4" style="display:none"></div></div><div id="noche-tab-historial" data-tab style="display:none"><div class="card"><div class="tbl-wrap"><table><thead><tr><th>Fecha</th><th>Barras</th><th>Costo</th><th>Recaudación</th><th>Sin cargo</th><th>Dif.</th><th></th></tr></thead><tbody id="t-hist"></tbody></table></div></div></div>`;
+  pg.innerHTML=`<div class="inner-tabs"><button class="inner-tab active" onclick="switchTab('noche','nueva',this)">Nueva noche</button><button class="inner-tab" onclick="switchTab('noche','historial',this)">Historial</button></div><div id="noche-tab-nueva" data-tab><div id="n-p1">${S.nocheActiva?`<div class="alert a-warning" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px"><span>🌙 Noche activa: <strong>${S.nocheActiva.fecha}</strong></span><button class="btn btn-gold btn-sm" onclick="rNocheActiva()">Continuar →</button></div>`:''}
+  <div class="card"><div class="card-title">Configurar nueva noche</div><div class="form-row"><div class="form-group"><label>Fecha</label><input type="date" id="n-fecha" value="${hoy}" style="min-width:140px"></div><div class="form-group"><label>Barras</label><div style="display:flex;gap:9px;flex-wrap:wrap;margin-top:3px">${act.map(b=>`<label style="display:flex;align-items:center;gap:4px;font-size:12px;cursor:pointer"><input type="checkbox" value="${b.id}" checked style="width:auto"><span style="color:${b.color};font-weight:600">${b.nombre}</span></label>`).join('')}</div></div></div><button class="btn btn-primary" onclick="nIniciar()">Iniciar noche →</button></div></div><div id="n-p2" style="display:none"></div><div id="n-p3" style="display:none"></div><div id="n-p4" style="display:none"></div></div><div id="noche-tab-historial" data-tab style="display:none"><div class="card"><div class="tbl-wrap"><table><thead><tr><th>Fecha</th><th>Barras</th><th>Costo</th><th>Recaudación</th><th>Sin cargo</th><th>Dif.</th><th></th></tr></thead><tbody id="t-hist"></tbody></table></div></div></div>`;
   if(S.nocheActiva)rNocheActiva();
 }
-function nIniciar(){const fecha=document.getElementById('n-fecha').value;const checks=[...document.querySelectorAll('#n-p1 input[type=checkbox]:checked')].map(c=>c.value);if(!checks.length){alert('Seleccioná al menos una barra');return;}S.nocheActiva={fecha,barras:checks,apertura:{},cierre:{},recaudacion:{},consumiciones:{}};rNocheActiva();}
+async function nIniciar(){
+  const fecha=document.getElementById('n-fecha').value;
+  const checks=[...document.querySelectorAll('#n-p1 input[type=checkbox]:checked')].map(c=>c.value);
+  if(!checks.length){alert('Seleccioná al menos una barra');return;}
+  // Guardar en Supabase como noche en curso
+  const row=await dbInsert('noches',{fecha,barras:checks,apertura:{},cierre:{},recaudacion:{},costo_barra:{},consumiciones:{},cerrada:false,en_curso:true});
+  if(!row){alert('Error al crear la noche');return;}
+  S.nocheActiva={...row};
+  S.noches.push({...row});
+  rNocheActiva();
+}
 function rNocheActiva(){if(!S.nocheActiva)return;document.getElementById('n-p1').style.display='none';const tieneAp=Object.keys(S.nocheActiva.apertura).length>0;if(!tieneAp)rNP2();else rNP3();}
 function rNP2(){
   const n=S.nocheActiva;const p2=document.getElementById('n-p2');p2.style.display='block';
@@ -653,7 +776,13 @@ function rNP2(){
   <button class="btn btn-primary" onclick="nConfAp()">Confirmar apertura →</button>`;
 }
 function updApOz(bid,pid){const v=parseFloat(document.getElementById('ap-'+bid+'-'+pid)?.value)||0;const p=gP(pid);const el=document.getElementById('ap-oz-'+bid+'-'+pid);if(el&&p)el.textContent=p.tipo==='fraccionado'?fn(v*ozB(p),1)+' oz':'—';}
-function nConfAp(){const n=S.nocheActiva;for(const bid of n.barras){n.apertura[bid]={};for(const p of prodsActivos()){const v=parseFloat(document.getElementById('ap-'+bid+'-'+p.id)?.value)||0;if(v>0)n.apertura[bid][p.id]=v;}}document.getElementById('n-p2').style.display='none';rNP3();}
+async function nConfAp(){
+  const n=S.nocheActiva;
+  for(const bid of n.barras){n.apertura[bid]={};for(const p of prodsActivos()){const v=parseFloat(document.getElementById('ap-'+bid+'-'+p.id)?.value)||0;if(v>0)n.apertura[bid][p.id]=v;}}
+  // Guardar apertura en Supabase
+  if(n.id)await dbUpdate('noches',n.id,{apertura:n.apertura});
+  document.getElementById('n-p2').style.display='none';rNP3();
+}
 function rNP3(){
   const n=S.nocheActiva;const p3=document.getElementById('n-p3');p3.style.display='block';
   const bOpts=n.barras.map(bid=>`<option value="${bid}">${gB(bid)?.nombre||bid}</option>`).join('');
@@ -661,12 +790,16 @@ function rNP3(){
   <div class="alert a-warning" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px"><span>Registrá el stock final al cerrar.</span><button onclick="abrirCR('cierre')" style="padding:7px 14px;border-radius:8px;background:var(--gold);color:var(--bg);font-size:12px;font-weight:700;border:none;cursor:pointer;font-family:inherit;white-space:nowrap">Carga rápida / Escaneo →</button></div>
   ${n.barras.map(bid=>{const b=gB(bid);return`<div class="card"><div class="card-title" style="color:${b?.color}">${b?.nombre||bid} — Cierre</div><table><thead><tr><th>Producto</th><th>Apertura</th><th>Final</th><th>Consumo</th><th>Oz cons.</th><th>Costo</th></tr></thead><tbody>${prodsActivos().map(p=>{const ap=n.apertura[bid]?.[p.id]||0;if(!ap&&!(S.stock[bid]?.[p.id]||0))return'';return`<tr><td style="font-size:11px">${p.nombre}</td><td style="font-size:12px">${fn(ap)} bot.</td><td><input type="number" step="0.1" min="0" id="ci-${bid}-${p.id}" placeholder="0" style="width:70px" oninput="updCi('${bid}',${p.id})"></td><td id="ci-cons-${bid}-${p.id}" style="font-weight:600">—</td><td id="ci-oz-${bid}-${p.id}" style="font-size:10px;color:var(--text2)">—</td><td id="ci-cost-${bid}-${p.id}" style="font-size:11px">—</td></tr>`;}).join('')}</tbody></table></div>`;}).join('')}
   <div class="card"><div class="card-title">Recaudación del cajero</div><div id="caj-rows"></div><div class="form-row" style="margin-top:7px"><div class="form-group"><label>Barra</label><select id="caj-barra" style="min-width:120px">${bOpts}</select></div><div class="form-group"><label>Monto ($)</label><input type="number" id="caj-monto" placeholder="0" style="width:130px"></div><button class="btn btn-success" style="align-self:flex-end" onclick="addRec()">Agregar</button></div></div>
-  <button class="btn btn-success" onclick="nCerrar()">Cerrar noche y guardar →</button>`;
+  <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:4px">
+    <button class="btn btn-success" onclick="nCerrar()">Cerrar noche y guardar →</button>
+    ${CU==='admin'?`<button class="btn btn-danger" onclick="cancelarNoche()">Cancelar noche</button>`:''}
+  </div>`;
 }
 function updCi(bid,pid){const ap=S.nocheActiva.apertura[bid]?.[pid]||0,ci=parseFloat(document.getElementById('ci-'+bid+'-'+pid)?.value)||0,cons=Math.max(0,ap-ci);const p=gP(pid);const bEl=document.getElementById('ci-cons-'+bid+'-'+pid);const oEl=document.getElementById('ci-oz-'+bid+'-'+pid);const cEl=document.getElementById('ci-cost-'+bid+'-'+pid);if(bEl){bEl.textContent=fn(cons)+' bot.';bEl.style.color=cons>0?'#97C459':'var(--text2)';}if(oEl&&p)oEl.textContent=p.tipo==='fraccionado'?fn(cons*ozB(p),1)+' oz':'—';if(cEl&&p)cEl.textContent=fp(cons*p.costo);}
-function addRec(){const bid=document.getElementById('caj-barra').value,m=parseFloat(document.getElementById('caj-monto').value)||0;if(!m)return;S.nocheActiva.recaudacion[bid]=m;document.getElementById('caj-monto').value='';document.getElementById('caj-rows').innerHTML=Object.entries(S.nocheActiva.recaudacion).map(([b,v])=>`<div style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:0.5px solid var(--border)"><span style="font-size:12px;color:${gB(b)?.color||'inherit'}">${gB(b)?.nombre||b}</span><span style="font-weight:600">${fp(v)}</span></div>`).join('');}
+function addRec(){const bid=document.getElementById('caj-barra').value,m=parseFloat(document.getElementById('caj-monto').value)||0;if(!m)return;S.nocheActiva.recaudacion[bid]=m;document.getElementById('caj-monto').value='';document.getElementById('caj-rows').innerHTML=Object.entries(S.nocheActiva.recaudacion).map(([b,v])=>`<div style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:0.5px solid var(--border)"><span style="font-size:12px;color:${gB(b)?.color||'inherit'}">${gB(b)?.nombre||b}</span><span style="font-weight:600">${fp(v)}</span></div>`).join('');if(S.nocheActiva.id)dbUpdate('noches',S.nocheActiva.id,{recaudacion:S.nocheActiva.recaudacion});}
 async function nCerrar(){
   const n=S.nocheActiva;n.cierre={};n.consumo={};n.costo_barra={};n.tragos_teoricos={};n.recaudacion_teorica={};
+  // Marcar como no en curso desde el inicio
   for(const bid of n.barras){n.cierre[bid]={};n.consumo[bid]={};let co=0,rT=0;n.tragos_teoricos[bid]={};
     for(const p of prodsActivos()){const ap=n.apertura[bid]?.[p.id]||0,ci=parseFloat(document.getElementById('ci-'+bid+'-'+p.id)?.value)||0,cons=Math.max(0,ap-ci);
       if(ap>0||cons>0){n.cierre[bid][p.id]=ci;n.consumo[bid][p.id]=cons;co+=cons*p.costo;if(p.tipo==='unidad'&&p.precio_venta>0)rT+=cons*p.precio_venta;
@@ -675,14 +808,24 @@ async function nCerrar(){
     n.stock_final_barras=n.stock_final_barras||{};n.stock_final_barras[bid]={...(S.stock[bid]||{})};
   }
   n.stock_final_deposito={...(S.stock.deposito||{})};n.cerrada=true;
-  // Guardar en Supabase
-  const row=await dbInsert('noches',{fecha:n.fecha,barras:n.barras,apertura:n.apertura,cierre:n.cierre,consumo:n.consumo,recaudacion:n.recaudacion,costo_barra:n.costo_barra,consumiciones:n.consumiciones||{},recaudacion_teorica:n.recaudacion_teorica,stock_final_barras:n.stock_final_barras,stock_final_deposito:n.stock_final_deposito,cerrada:true});
-  if(row){n.id=row.id;S.noches.push({...n});}
+  // Actualizar noche en Supabase (ya existe como en_curso)
+  const updateData={cierre:n.cierre,consumo:n.consumo,recaudacion:n.recaudacion,costo_barra:n.costo_barra,consumiciones:n.consumiciones||{},recaudacion_teorica:n.recaudacion_teorica,stock_final_barras:n.stock_final_barras,stock_final_deposito:n.stock_final_deposito,cerrada:true,en_curso:false};
+  if(n.id){await dbUpdate('noches',n.id,updateData);const idx=S.noches.findIndex(x=>x.id===n.id);if(idx>=0)S.noches[idx]={...S.noches[idx],...updateData,...{id:n.id}};}
   // Actualizar stock barras en BD
   for(const bid of n.barras){for(const[pid,ci] of Object.entries(n.cierre[bid]||{})){S.stock[bid][pid]=ci;await dbUpsertStock(parseInt(pid),bid,ci);}}
   S.nocheActiva=null;document.getElementById('n-p3').style.display='none';rNP4(n);
 }
 function rNP4(n){const p4=document.getElementById('n-p4');p4.style.display='block';let tR=0,tC=0,tT=0,tCon=0;const det=n.barras.map(bid=>{const b=gB(bid),r=n.recaudacion[bid]||0,c=n.costo_barra[bid]||0,te=n.recaudacion_teorica[bid]||0;const cs=(n.consumiciones||{})[bid]||[];const ct=cs.reduce((s,x)=>s+x.costo_total,0);tR+=r;tC+=c;tT+=te;tCon+=ct;const dC=r-c,dT=r-te;return`<div class="card"><div class="card-title" style="color:${b?.color}">${b?.nombre||bid}</div><div class="compare-grid"><div class="compare-cell"><div class="compare-label">Recaudación caja</div><div class="compare-value c-green">${fp(r)}</div></div><div class="compare-cell"><div class="compare-label">Costo barra</div><div class="compare-value c-amber">${fp(c)}</div></div><div class="compare-cell"><div class="compare-label">Dif. caja vs costo</div><div class="compare-value ${dC>=0?'c-green':'c-red'}">${dC>=0?'+':''}${fp(dC)}</div></div><div class="compare-cell"><div class="compare-label">Rec. teórica</div><div class="compare-value c-purple">${fp(te)}</div></div><div class="compare-cell"><div class="compare-label">Dif. vs teórico</div><div class="compare-value ${dT>=0?'c-green':'c-red'}">${dT>=0?'+':''}${fp(dT)}</div></div><div class="compare-cell"><div class="compare-label">Sin cargo</div><div class="compare-value c-amber">${fp(ct)}</div></div></div></div>`;}).join('');const dCT=tR-tC,dTT=tR-tT;p4.innerHTML=`<div class="alert a-success">Noche cerrada y guardada en base de datos</div><div class="card" style="border:1px solid ${dCT>=0?'rgba(99,153,34,.4)':'rgba(226,75,74,.4)'}"><div class="card-title">Resumen total</div><div class="compare-grid"><div class="compare-cell"><div class="compare-label">Total recaudado</div><div class="compare-value c-green">${fp(tR)}</div></div><div class="compare-cell"><div class="compare-label">Costo barras</div><div class="compare-value c-amber">${fp(tC)}</div></div><div class="compare-cell"><div class="compare-label">Dif. caja vs costo</div><div class="compare-value ${dCT>=0?'c-green':'c-red'}">${dCT>=0?'+':''}${fp(dCT)}</div></div><div class="compare-cell"><div class="compare-label">Rec. teórica</div><div class="compare-value c-purple">${fp(tT)}</div></div><div class="compare-cell"><div class="compare-label">Dif. vs teórico</div><div class="compare-value ${dTT>=0?'c-green':'c-red'}">${dTT>=0?'+':''}${fp(dTT)}</div></div><div class="compare-cell"><div class="compare-label">Total sin cargo</div><div class="compare-value c-amber">${fp(tCon)}</div></div></div></div>${det}<div style="display:flex;gap:7px;margin-top:7px;flex-wrap:wrap"><button class="btn" onclick="rNoche()">Nueva noche</button></div>`;}
+async function cancelarNoche(){
+  if(!confirm('¿Cancelar la noche activa? Se eliminarán todos los datos de apertura.'))return;
+  if(S.nocheActiva?.id){
+    await dbDelete('noches',S.nocheActiva.id);
+    S.noches=S.noches.filter(n=>n.id!==S.nocheActiva.id);
+  }
+  S.nocheActiva=null;
+  rNoche();
+  crToast('Noche cancelada');
+}
 async function rHistorial(){
   const noches=S.noches.filter(n=>n.cerrada).slice().reverse();
   document.getElementById('t-hist').innerHTML=noches.map(n=>{const r=Object.values(n.recaudacion||{}).reduce((a,b)=>a+b,0),c=Object.values(n.costo_barra||{}).reduce((a,b)=>a+b,0),d=r-c,co=tCon(n);return`<tr><td>${n.fecha}</td><td style="font-size:11px">${(n.barras||[]).map(bid=>gB(bid)?.nombre||bid).join(', ')}</td><td>${fp(c)}</td><td>${fp(r)}</td><td style="color:var(--gold)">${fp(co)}</td><td><span class="badge ${d>=0?'b-green':'b-red'}">${d>=0?'+':''}${fp(d)}</span></td><td style="display:flex;gap:3px"><button class="btn btn-sm" onclick="verDetalleNoche(${n.id})">Ver</button><button class="btn btn-sm btn-danger" onclick="borrarNoche(${n.id})">×</button></td></tr>`;}).join('');
@@ -708,7 +851,9 @@ function openMCon(bid){
 }
 function mconModChange(){const m=document.getElementById('mcon-modalidad').value;document.getElementById('mcon-prod-row').style.display=m==='producto'?'':'none';document.getElementById('mcon-rec-row').style.display=m==='receta'?'':'none';document.getElementById('mcon-cant-lbl').textContent=m==='producto'?'Cantidad (botellas)':'Cantidad (tragos)';mconCalc();}
 function mconCalc(){const m=document.getElementById('mcon-modalidad').value,cant=parseFloat(document.getElementById('mcon-cant').value)||0,desc=parseFloat(document.getElementById('mcon-desc').value)||100;let cb=0;if(m==='producto'){const p=document.getElementById('mcon-prod-wrap')?._getProd?.();if(p)cb=cant*p.costo;}else{const r=gR(document.getElementById('mcon-rec').value);if(r)cb=cant*cRec(r);}document.getElementById('mcon-preview').textContent=fp(cb*(desc/100))+(desc<100?' ('+desc+'% de '+fp(cb)+')':'');}
-function agregarConsu(){if(!S.nocheActiva){alert('No hay noche activa');return;}const m=document.getElementById('mcon-modalidad').value,tipo=document.getElementById('mcon-tipo').value,cant=parseFloat(document.getElementById('mcon-cant').value)||0,desc=parseFloat(document.getElementById('mcon-desc').value)||100,mot=document.getElementById('mcon-motivo').value.trim()||'Sin descripción';if(!cant){alert('Ingresá una cantidad');return;}let cb=0,prodId=null,recId=null;if(m==='producto'){const p=document.getElementById('mcon-prod-wrap')?._getProd?.();if(!p){alert('Seleccioná un producto');return;}prodId=p.id;cb=cant*p.costo;}else{const r=gR(document.getElementById('mcon-rec').value);if(!r){alert('Seleccioná receta');return;}recId=r.id;cb=cant*cRec(r);}if(!S.nocheActiva.consumiciones)S.nocheActiva.consumiciones={};if(!S.nocheActiva.consumiciones[mconBid])S.nocheActiva.consumiciones[mconBid]=[];S.nocheActiva.consumiciones[mconBid].push({tipo,modalidad:m,prodId,recId,cantidad:cant,motivo:mot,costo_total:cb*(desc/100),descuento:desc});document.getElementById('mcon-cant').value='1';document.getElementById('mcon-desc').value='100';document.getElementById('mcon-motivo').value='';mconCalc();renderMconL();updConBadge(mconBid);}
+function agregarConsu(){if(!S.nocheActiva){alert('No hay noche activa');return;}const m=document.getElementById('mcon-modalidad').value,tipo=document.getElementById('mcon-tipo').value,cant=parseFloat(document.getElementById('mcon-cant').value)||0,desc=parseFloat(document.getElementById('mcon-desc').value)||100,mot=document.getElementById('mcon-motivo').value.trim()||'Sin descripción';if(!cant){alert('Ingresá una cantidad');return;}let cb=0,prodId=null,recId=null;if(m==='producto'){const p=document.getElementById('mcon-prod-wrap')?._getProd?.();if(!p){alert('Seleccioná un producto');return;}prodId=p.id;cb=cant*p.costo;}else{const r=gR(document.getElementById('mcon-rec').value);if(!r){alert('Seleccioná receta');return;}recId=r.id;cb=cant*cRec(r);}if(!S.nocheActiva.consumiciones)S.nocheActiva.consumiciones={};if(!S.nocheActiva.consumiciones[mconBid])S.nocheActiva.consumiciones[mconBid]=[];S.nocheActiva.consumiciones[mconBid].push({tipo,modalidad:m,prodId,recId,cantidad:cant,motivo:mot,costo_total:cb*(desc/100),descuento:desc});document.getElementById('mcon-cant').value='1';document.getElementById('mcon-desc').value='100';document.getElementById('mcon-motivo').value='';mconCalc();renderMconL();updConBadge(mconBid);
+  // Guardar consumiciones en Supabase
+  if(S.nocheActiva?.id)dbUpdate('noches',S.nocheActiva.id,{consumiciones:S.nocheActiva.consumiciones});}
 function quitarCon(bid,i){if(S.nocheActiva?.consumiciones?.[bid]){S.nocheActiva.consumiciones[bid].splice(i,1);renderMconL();updConBadge(bid);}}
 function renderMconL(){const bid=mconBid,lista=(S.nocheActiva?.consumiciones||{})[bid]||[],el=document.getElementById('mcon-lista');if(!lista.length){el.innerHTML='<div style="font-size:12px;color:var(--text2);padding:5px 0">Sin consumiciones.</div>';return;}const total=lista.reduce((s,c)=>s+c.costo_total,0);el.innerHTML=lista.map((c,i)=>{const p=c.prodId?gP(c.prodId):null,r=c.recId?gR(c.recId):null,nom=p?p.nombre:r?r.nombre:'—';return`<div class="consu-row"><span class="badge ${TCOL[c.tipo]||'b-gray'}" style="flex-shrink:0">${TCON[c.tipo]||c.tipo}</span><div class="consu-info"><div class="consu-name">${nom} — x${fn(c.cantidad)} ${c.modalidad==='producto'?'bot.':'tragos'}</div><div class="consu-detail">${c.motivo} · ${fp(c.costo_total)}</div></div><button class="btn btn-sm btn-danger" onclick="quitarCon('${bid}',${i})">×</button></div>`;}).join('')+`<div style="display:flex;justify-content:flex-end;font-size:12px;margin-top:7px;padding-top:7px;border-top:0.5px solid var(--border)">Total: <strong style="margin-left:7px;color:#E24B4A">${fp(total)}</strong></div>`;}
 function updConBadge(bid){const el=document.getElementById('con-badge-'+bid);if(!el)return;const lista=(S.nocheActiva?.consumiciones||{})[bid]||[];const t=lista.reduce((s,c)=>s+c.costo_total,0);el.textContent=lista.length?lista.length+' consumición'+(lista.length>1?'es':'')+' · '+fp(t):'Sin consumiciones';el.className='badge '+(lista.length?'b-orange':'b-gray');}
