@@ -40,7 +40,7 @@ body{font-family:'Helvetica Neue',Arial,sans-serif;background:var(--bg);color:va
 .back-btn{background:none;border:none;color:var(--text2);font-size:12px;cursor:pointer;font-family:inherit;padding:4px 0}
 /* APP */
 #app-screen{display:none}
-.nav{background:var(--bg2);position:sticky;top:0;z-index:100;border-bottom:0.5px solid var(--border)}.nav-top{display:flex;align-items:center;padding:0 20px;height:54px}
+.nav{background:var(--bg2);position:fixed;top:0;left:0;right:0;z-index:100;border-bottom:0.5px solid var(--border)}.nav-top{display:flex;align-items:center;padding:0 20px;height:54px}
 .nav-logo{font-size:16px;font-weight:700;color:var(--text);margin-right:20px;flex-shrink:0;letter-spacing:-0.5px}
 .nav-logo span{color:var(--gold)}
 .nav-tabs{display:flex;gap:3px;overflow-x:auto;flex:1;scrollbar-width:none;justify-content:center}
@@ -615,7 +615,7 @@ function pkPress(k){if(pbuf.length>=4)return;pbuf+=k;updateDots();if(pbuf.length
 function pkDel(){pbuf=pbuf.slice(0,-1);updateDots();}
 function updateDots(){for(let i=0;i<4;i++)document.getElementById('d'+i).classList.toggle('filled',i<pbuf.length);}
 function checkPin(){if(pbuf===PINS[prole]){CU=prole;startApp();}else{document.getElementById('pin-err').textContent='PIN incorrecto.';pbuf='';updateDots();setTimeout(()=>document.getElementById('pin-err').textContent='',2000);}}
-function logout(){CU=null;pbuf='';document.getElementById('app-screen').style.display='none';document.getElementById('login-screen').style.display='flex';document.getElementById('roles-wrap').style.display='block';document.getElementById('pin-screen').style.display='none';updateDots();}
+function logout(){CU=null;pbuf='';const _mn=document.getElementById('mobile-nav');if(_mn)_mn.style.display='none';document.getElementById('app-screen').style.display='none';document.getElementById('login-screen').style.display='flex';document.getElementById('roles-wrap').style.display='block';document.getElementById('pin-screen').style.display='none';updateDots();}
 async function startApp(){
   document.getElementById('login-screen').style.display='none';
   document.getElementById('app-screen').style.display='block';
@@ -631,6 +631,15 @@ function guardarPin(){const rol=document.getElementById('pin-rol').value,n=docum
 
 // ===== NAV =====
 function buildNav(){
+  // Calcular altura del nav y aplicar padding-top al contenido
+  setTimeout(()=>{
+    const nav=document.querySelector('.nav');
+    if(!nav)return;
+    const h=nav.offsetHeight;
+    // Aplicar padding-top a todos los pages
+    document.querySelectorAll('.page').forEach(p=>{p.style.paddingTop=Math.max(20,h+8)+'px';});
+  },50);
+
   // Nav desktop
   document.getElementById('nav-tabs').innerHTML=TABS[CU].map(t=>`<button class="nav-tab" data-page="${t}">${TLABELS[t]}</button>`).join('');
   document.querySelectorAll('.nav-tab').forEach(btn=>btn.addEventListener('click',()=>goTo(btn.dataset.page)));
@@ -646,7 +655,10 @@ function buildNav(){
   window.addEventListener('resize',()=>{
     const m=window.innerWidth<=768;
     if(mobileNav)mobileNav.style.display=m?'flex':'none';
-  },{once:true});
+    // Recalcular padding-top
+    const nav=document.querySelector('.nav');
+    if(nav){const h=nav.offsetHeight;document.querySelectorAll('.page').forEach(p=>{p.style.paddingTop=Math.max(20,h+8)+'px';});}
+  });
 }
 function goTo(page){
   // Actualizar mobile nav activo
